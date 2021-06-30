@@ -8,3 +8,14 @@ def index(request):
     return render(request, 'core/index.html')
 
 
+def index(request):
+    return render(request, 'core/Contacto.html')
+
+
+def index(request):
+    return render(request, 'core/Despacho.html')
+
+
+def index(request):
+    return render(request, 'core/Sobre_Nosotros.html')
+
