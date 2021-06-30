@@ -2,44 +2,42 @@
 <html lang="en">
 
 <head>
-    <!-- basic -->
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- mobile metas -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <!-- site metas -->
+    
     <title>Spicyo</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
-    <!-- owl css -->
+    
     <link rel="stylesheet" href="{% static 'core/css/owl.carousel.min.css' %}">
-    <!-- style css -->
+    
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
-    <!-- responsive-->
+    
     <link rel="stylesheet" href="{% static 'core/css/responsive.css' %}">
-    <!-- awesome fontfamily -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    
 </head>
-<!-- body -->
+
 
 <body class="main-layout blog_page">
-    <!-- loader  -->
+    
     <div class="loader_bg">
         <div class="loader"><img src="{% static 'core/images/loading.gif' %}" alt="" /></div>
     </div>
 
     <div class="wrapper">
-    <!-- end loader -->
+    
 
      <div class="sidebar">
-            <!-- Sidebar  -->
+            
             <nav id="sidebar">
 
                 <div id="dismiss">
@@ -49,19 +47,19 @@
                 <ul class="list-unstyled components">
 
                     <li >
-                        <a href="index.html">Home</a>
+                        <a href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="{% url 'Sobre_nosotros' %}">Sobre_nosotros</a>
                     </li>
                     <li>
-                        <a href="recipe.html">Recipe</a>
+                        <a href="{% url 'Comida' %}">Comida</a>
                     </li>
                     <li class="active">
-                        <a href="blog.html">Blog</a>
+                        <a href="{% url 'Despacho' %}">Despacho</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="{% url 'Contacto' %}">Contacto</a>
                     </li>
                 </ul>
 
@@ -69,7 +67,7 @@
         </div>
 
     <div id="content">
-    <!-- header -->
+    
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -99,7 +97,7 @@
             </div>
         </div>
     </header>
-    <!-- end header -->
+    
 <div class="yellow_bg">
    <div class="container">
             <div class="row">
@@ -113,7 +111,7 @@
           </div>
 </div>
 
-<!-- blog -->
+
 <div class="blog">
   <div class="container">
     <div class="row">
@@ -162,16 +160,13 @@
     </div>
   </div>
 </div>
-<!-- end blog -->
 
-
-    <!-- footer -->
     <fooetr>
         <div class="footer">
             <div class="container-fluid">
                 <div class="row">
                   <div class=" col-md-12">
-                    <h2>Request  A<strong class="white"> Call  Back</strong></h2>
+                    <h2>Contactanos</h2>
                   </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                       
@@ -179,19 +174,19 @@
                             <div class="row">
                              
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <input class="form-control" placeholder="Name" type="text" name="Name">
+                                    <input class="form-control" placeholder="Nombre" type="text" name="Name">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <input class="form-control" placeholder="Email" type="text" name="Email">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                    <input class="form-control" placeholder="Telefono" type="text" name="Phone">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                                    <textarea class="textarea" placeholder="Mensaje" type="text" name="Message"></textarea>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <button class="send">Send</button>
+                                    <button class="send">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -205,24 +200,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_logo">
-                          <a href="index.html"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
+                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <ul class="lik">
-                            <li > <a href="index.html">Home</a></li>
-                            <li> <a href="about.html">About</a></li>
-                            <li> <a href="recipe.html">Recipe</a></li>
-                            <li class="active"> <a href="blog.html">Blog</a></li>
-                            <li> <a href="contact.html">Contact us</a></li>
+                            <li > <a href="{% url 'index' %}">Home</a></li>
+                            <li> <a href="{% url 'Sobre_nosotros' %}">Sobre_Nosotros</a></li>
+                            <li> <a href="{% url 'Comida' %}">Comida</a></li>
+                            <li class="active"> <a href="{% url 'Despacho' %}">Despacho</a></li>
+                            <li> <a href="{% url 'Contacto' %}">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-md-12">
                         <div class="new">
-                            <h3>Newsletter</h3>
+                            <h3>Noticia</h3>
                             <form class="newtetter">
-                                <input class="tetter" placeholder="Your email" type="text" name="Your email">
-                                <button class="submit">Subscribe</button>
+                                <input class="tetter" placeholder="Ingresa Tu Email" type="text" name="Your email">
+                                <button class="submit">Suscribete</button>
                             </form>
                         </div>
                     </div>
@@ -230,17 +225,17 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                    <p>© 2019 Todos Los Derechos Reservados. </p>
                 </div>
             </div>
         </div>
     </fooetr>
-    <!-- end footer -->
+    
 
     </div>
     </div>
     <div class="overlay"></div>
-    <!-- Javascript files-->
+    
     <script src="{% static 'core/js/jquery.min.js' %}"></script>
     <script src="{% static 'core/js/popper.min.js' %}"></script>
     <script src="{% static 'core/js/bootstrap.bundle.min.js' %}"></script>

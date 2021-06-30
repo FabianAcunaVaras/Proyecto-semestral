@@ -46,19 +46,19 @@
                 <ul class="list-unstyled components">
 
                     <li >
-                        <a href="index.html">Inicio</a>
+                        <a href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li>
-                        <a href="Sobre_nosotros.html">Sobre_nosotros</a>
+                        <a href="{% url 'Sobre_nosotros' %}">Sobre_nosotros</a>
                     </li>
                     <li>
-                        <a href="Comidae.html">Comida</a>
+                        <a href="{% url 'Comida' %}">Comida</a>
                     </li>
                     <li>
-                        <a href="Despacho.html">Despacho</a>
+                        <a href="{% url 'Despacho' %}">Despacho</a>
                     </li>
                     <li class="active">
-                        <a href="Contacto.html">Contacto</a>
+                        <a href="{% url 'Contacto' %}">Contacto</a>
                     </li>
                 </ul>
 
@@ -66,7 +66,7 @@
         </div>
 
     <div id="content">
-    <!-- header -->
+    
     <header>
         <div class="container-fluid">
             <div class="row">
@@ -96,8 +96,7 @@
             </div>
         </div>
     </header>
-    <!-- end header -->
-    <!-- footer -->
+    
     <fooetr>
         <div class="footer">
             <div class="container-fluid">
@@ -137,16 +136,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_logo">
-                          <a href="index.html"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
+                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <ul class="lik">
-                            <li > <a href="index.html">Inicio</a></li>
-                            <li> <a href="Sobre_nosotros.html">Sobre Nosotros</a></li>
-                            <li> <a href="Comida.html">Comida</a></li>
-                            <li> <a href="Despacho.html">Despacho</a></li>
-                            <li class="active"> <a href="contact.html">Contact us</a></li>
+                            <li > <a href="{% url 'index' %}">Inicio</a></li>
+                            <li> <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a></li>
+                            <li> <a href="{% url 'Comida' %}">Comida</a></li>
+                            <li> <a href="{% url 'Despacho' %}">Despacho</a></li>
+                            <li class="active"> <a href="{% url 'Contacto' %}">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-md-12">

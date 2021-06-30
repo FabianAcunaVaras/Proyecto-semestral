@@ -46,19 +46,19 @@
                 <ul class="list-unstyled components">
 
                     <li >
-                        <a href="index.html">Inicio</a>
+                        <a href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li class="active">
-                        <a href="sobre_nosotros.html">sobre_nosotros</a>
+                        <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a>
                     </li>
                     <li>
-                        <a href="Comida.html">Comida</a>
+                        <a href="{% url 'Comida' %}">Comida</a>
                     </li>
                     <li>
-                        <a href="Despacho.html">Blog</a>
+                        <a href="{% url 'Despacho' %}">Despacho</a>
                     </li>
                     <li>
-                        <a href="Contacto.html">Contacto</a>
+                        <a href="{% url 'Contacto' %}">Contacto</a>
                     </li>
                 </ul>
 
@@ -72,7 +72,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="full">
-                        <a class="logo" href="index.html"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
+                        <a class="logo" href="{% url 'index' %}"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -96,7 +96,7 @@
             </div>
         </div>
     </header>
-    <!-- end header -->
+    
     
     <div class="yellow_bg">
    <div class="container">
@@ -110,7 +110,7 @@
             </div>
           </div>
 </div>
-<!-- about -->
+
 <div class="about">
     <div class="container">
       <div class="row">
@@ -180,16 +180,16 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_logo">
-                          <a href="index.html"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
+                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <ul class="lik">
-                            <li > <a href="index.html">Inicio</a></li>
-                            <li class="active"> <a href="sobre_nosotros.html">Sobre Nosotros</a></li>
-                            <li> <a href="recipe.html">Comida</a></li>
-                            <li> <a href="blog.html">Despachos</a></li>
-                            <li> <a href="contact.html">Contacto</a></li>
+                            <li > <a href="{% url 'index' %}">Inicio</a></li>
+                            <li class="active"> <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a></li>
+                            <li> <a href="{% url 'Comida' %}">Comida</a></li>
+                            <li> <a href="{% url 'Despacho' %}">Despachos</a></li>
+                            <li> <a href="{% url 'Contacto' %}">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-md-12">
