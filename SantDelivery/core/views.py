@@ -1,21 +1,24 @@
-from django.core.exceptions import ValidationError
-from core.forms import ProveedoresForm, PaisForm
+
+
 from django.shortcuts import render,redirect
-from .models import Proveedores
+
+
 
 # Create your views here.
 def index(request):
     return render(request, 'core/index.html')
 
 
-def index(request):
+def Contacto(request):
     return render(request, 'core/Contacto.html')
 
 
-def index(request):
+def Despacho(request):
     return render(request, 'core/Despacho.html')
 
 
-def index(request):
+def Sobre_Nosotros(request):
     return render(request, 'core/Sobre_Nosotros.html')
 
+def Comida(request):
+    return render(request, 'core/Comida.html')
