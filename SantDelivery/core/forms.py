@@ -1,6 +1,4 @@
 from django.forms import ModelForm
-<<<<<<< HEAD
-=======
 from .models import Estado_Clientes, Estado_Despacho, Estado_Repartidor, Estado_Producto , Clientes, Repartidor, Productos, Cabecera_Pedidos, Detalle_Pedidos
 
 class Estado_ClientesForm(ModelForm):
@@ -74,4 +72,3 @@ class Detalle_PedidosForm(ModelForm):
         fields =['idCabPedido', 'idDetPedido', 'idProducto', 'Cantidad' ,'ObsProducto']
 
         
->>>>>>> raul

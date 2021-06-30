@@ -22,7 +22,7 @@
     
     <link rel="stylesheet" href="{% static 'core/css/responsive.css' %}">
     
-    <link rel="stylesheet" href="{% static 'core/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'">
     
 </head>
 
@@ -47,19 +47,19 @@
                 <ul class="list-unstyled components">
 
                     <li class="active">
-                        <a href="index.html">Inicio</a>
+                        <a href="{% url 'index' %}">Inicio</a>
                     </li>
                     <li>
-                        <a href="sobre_nosotros.html">Sobre Nosotros</a>
+                        <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a>
                     </li>
                     <li>
-                        <a href="Comida.html">Comidas</a>
+                        <a href="{% url 'Comida' %}">Comidas</a>
                     </li>
                     <li>
-                        <a href="Despacho.html">Despacho</a>
+                        <a href="{% url 'Despacho' %}">Despacho</a>
                     </li>
                     <li>
-                        <a href="Contacto.html">Contactanos</a>
+                        <a href="{% url 'Contacto' %}">Contactanos</a>
                     </li>
                 </ul>
 
@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="full">
-                        <a class="logo" href="index.html"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
+                        <a class="logo" href="{% url 'index' %}"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -109,9 +109,9 @@
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="slider_cont">
-                                                <h3>Discover Restaurants<br>That deliver near You</h3>
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                                <a class="main_bt_border" href="#">Order Now</a>
+                                                <h3>Descubra Restaurantes<br>Que Ofrecen Entregas Cerca De Usted</h3>
+                                                <p>Variedad de comida, todo en un solo lugar !</p>
+                                                <a class="main_bt_border" href="#">Ordene Ya!</a>
                                             </div>
                                         </div>
                                         <div class="col-md-7">
@@ -125,9 +125,9 @@
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="slider_cont">
-                                                <h3>Discover Restaurants<br>That deliver near You</h3>
-                                                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                                                <a class="main_bt_border" href="#">Order Now</a>
+                                                <h3>Descubra <br>Las Mejores Ofertas</h3>
+                                                <p>Ofertas Diarias en multiples Platos</p>
+                                                <a class="main_bt_border" href="#">Ordene Ya!</a>
                                             </div>
                                         </div>
                                         <div class="col-md-7 full text_align_center">
@@ -152,19 +152,6 @@
     </div>
     
 
-
-
-
-
-
- 
-
-
-
-
-
-
-    
     <section class="resip_section">
         <div class="container">
             <div class="row">
@@ -284,9 +271,9 @@
          <div class="col-md-12">
              <div class="title">
                 <i><img src="{% static 'core/images/title.png' %}" alt="#"/></i>
-                <h2>About Our Food & Restaurant</h2>
-                <span>It is a long established fact that a reader will be distracted by the readable content of a
-                   <br> page when looking at its layout. The point of using Lorem
+                <h2>Acerca De Nuestra Comida y Restaurantes</h2>
+                <span> 
+                   <br> 
                 </span>
              </div>
           </div>
@@ -390,7 +377,7 @@
             <div class="container-fluid">
                 <div class="row">
                   <div class=" col-md-12">
-                    <h2>Request  A<strong class="white"> Call  Back</strong></h2>
+                    <h2>Contactanos<strong class="white"></strong></h2>
                   </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                       
@@ -398,19 +385,19 @@
                             <div class="row">
                              
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <input class="form-control" placeholder="Name" type="text" name="Name">
+                                    <input class="form-control" placeholder="Nombre" type="text" name="Name">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <input class="form-control" placeholder="Email" type="text" name="Email">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                                    <input class="form-control" placeholder="Telefono" type="text" name="Phone">
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                                    <textarea class="textarea" placeholder="Mensaje" type="text" name="Message"></textarea>
                                 </div>
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                    <button class="send">Send</button>
+                                    <button class="send">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -424,24 +411,24 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_logo">
-                          <a href="index.html"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
+                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <ul class="lik">
-                            <li class="active"> <a href="index.html">Home</a></li>
-                            <li> <a href="about.html">About</a></li>
-                            <li> <a href="recipe.html">Recipe</a></li>
-                            <li> <a href="blog.html">Blog</a></li>
-                            <li> <a href="contact.html">Contact us</a></li>
+                            <li class="active"> <a href="{% url 'index' %}">Inicio</a></li>
+                            <li> <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a></li>
+                            <li> <a href="{% url 'Comida' %}">Comida</a></li>
+                            <li> <a href="{% url 'Despacho' %}">Despacho</a></li>
+                            <li> <a href="{% url 'Contacto' %}">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-md-12">
                         <div class="new">
-                            <h3>Newsletter</h3>
+                            <h3>Noticias</h3>
                             <form class="newtetter">
-                                <input class="tetter" placeholder="Your email" type="text" name="Your email">
-                                <button class="submit">Subscribe</button>
+                                <input class="tetter" placeholder="Ingresa Tu EMail" type="text" name="Your email">
+                                <button class="submit">Suscribete</button>
                             </form>
                         </div>
                     </div>
@@ -449,7 +436,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                    <p>© 2019 Todos Los Derechos Reservados</p>
                 </div>
             </div>
         </div>
@@ -458,7 +445,7 @@
 
     </div>
     </div>
-    <!-- <div class="overlay"></div> -->
+    <div class="overlay"></div> 
     
     <script src="{% static  'core/js/jquery.min.js' %}"></script>
     <script src="{% static  'core/js/popper.min.js' %}"></script>
