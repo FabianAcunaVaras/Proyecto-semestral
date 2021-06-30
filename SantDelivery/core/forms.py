@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Estado_Clientes,Estado_Despacho,Estado_Repartidor,Estado_Producto,Clientes,Repartidor,Productos
+from .models import Estado_Clientes,Estado_Despacho,Estado_Repartidor,Estado_Producto,Clientes,Repartidor,Productos,Cabecera_Pedidos,Detalle_Pedidos
 
 class Estado_ClientesForm(ModelForm):
     class Meta:
@@ -35,3 +35,13 @@ class ProductosForm(ModelForm):
     class Meta:
         model = Productos
         fields = ['idProducto', 'NombreProducto', 'DescripcionProducto', 'ValorProducto', 'IdEstadoProducto']
+
+class Cabecera_PedidosForm(ModelForm):
+    class Meta:
+        model = Cabecera_Pedidos
+        fields = ['idCabPedido', 'FechaPedido', 'ObsPedido', 'idCliente', 'idRepatidor', 'idEstadoDespacho']
+
+class Detalle_PedidosForm(ModelForm):
+    class Meta:
+        model = Detalle_Pedidos
+        fields = ['idCabPedido', 'idDetPedido', 'idProducto', 'Cantidad', 'ObsProducto']
