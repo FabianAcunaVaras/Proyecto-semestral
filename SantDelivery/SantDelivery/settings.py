@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'PruebaTres.urls'
+ROOT_URLCONF = 'SantDelivery.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'PruebaTres.wsgi.application'
+WSGI_APPLICATION = 'SantDelivery.wsgi.application'
 
 
 # Database
