@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     
-    <title>Spicyo</title>
+    <title>SantDelivery</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -73,14 +73,14 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="full">
-                        <a class="logo" href="index.html"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
+                        <a class="logo" href="{% url 'index' %}"><img src="{% static 'core/images/logo.png' %}" alt="#" /></a>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="full">
                         <div class="right_header_info">
                             <ul>
-                                <li class="dinone">Contactanos <img style="margin-right: 15px;margin-left: 15px;" src="{% static 'core/images/phone_icon.png' %}" alt="#"><a href="#">+56930729548</a></li>
+                                <li class="dinone">Contactanos: <img style="margin-right: 15px;margin-left: 15px;" src="{% static 'core/images/phone_icon.png' %}" alt="#"><a href="#">+56930729548</a></li>
                                 <li class="dinone"><img style="margin-right: 15px;" src="{% static 'core/images/mail_icon.png' %}" alt="#"><a href="#">santdelivery@gmail.com</a></li>
                                 <li class="dinone"><img style="margin-right: 15px;height: 21px;position: relative;top: -2px;" src="{% static 'core/images/location_icon.png' %}" alt="#"><a href="#">Av. Republica #104</a></li>
                                 <li class="button_user"><a class="button active" href="#">Login</a><a class="button" href="#">Registro</a></li>
@@ -124,8 +124,8 @@
                         <img src="{% static 'core/images/rs1.png' %}" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Homemade</h3>
-                        <h4><span class="theme_color">$</span>10</h4>
+                        <h3>Platillos Caseros</h3>
+                        <h4><span class="theme_color">$</span>6.000</h4>
                     </div>
                 </div>
                 <div class="item">
@@ -133,8 +133,8 @@
                         <img src="{% static 'core/images/rs2.png' %}" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Noodles</h3>
-                        <h4><span class="theme_color">$</span>20</h4>
+                        <h3>Fideos</h3>
+                        <h4><span class="theme_color">$</span>4.000</h4>
                     </div>
                 </div>
                 <div class="item">
@@ -142,8 +142,8 @@
                         <img src="{% static 'core/images/rs3.png' %}" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>Egg</h3>
-                        <h4><span class="theme_color">$</span>30</h4>
+                        <h3>Huevo Frito</h3>
+                        <h4><span class="theme_color">$</span>1.500</h4>
                     </div>
                 </div>
                 <div class="item">
@@ -152,7 +152,7 @@
                     </div>
                     <div class="product_blog_cont">
                         <h3>Sushi Dizzy</h3>
-                        <h4><span class="theme_color">$</span>40</h4>
+                        <h4><span class="theme_color">$</span>3.000</h4>
                     </div>
                 </div>
                 <div class="item">
@@ -160,56 +160,10 @@
                         <img src="{% static 'core/images/rs5.png' %}" alt="#" />
                     </div>
                     <div class="product_blog_cont">
-                        <h3>The Coffee Break</h3>
-                        <h4><span class="theme_color">$</span>50</h4>
+                        <h3>Medialunas</h3>
+                        <h4><span class="theme_color">3 x $</span>1.500</h4>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="{% static 'core/images/rs1.png' %}" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Homemade</h3>
-                        <h4><span class="theme_color">$</span>10</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="{% static 'core/images/rs2.png' %}" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Noodles</h3>
-                        <h4><span class="theme_color">$</span>20</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="{% static 'core/images/rs3.png' %}" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Egg</h3>
-                        <h4><span class="theme_color">$</span>30</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="{% static 'core/images/rs4.png' %}" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>Sushi Dizzy</h3>
-                        <h4><span class="theme_color">$</span>40</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="product_blog_img">
-                        <img src="{% static 'core/images/rs5.png' %}" alt="#" />
-                    </div>
-                    <div class="product_blog_cont">
-                        <h3>The Coffee Break</h3>
-                        <h4><span class="theme_color">$</span>50</h4>
-                    </div>
-                </div>
-
             </div>
         </div>
             </div>
@@ -257,7 +211,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer_logo">
-                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo1.jpg' %}" alt="logo" /></a>
+                          <a href="{% url 'index' %}"><img src="{% static 'core/images/logo.png' %}" alt="logo" /></a>
                         </div>
                     </div>
                     <div class="col-md-12">
