@@ -83,7 +83,7 @@
                                 <li class="dinone">Contactanos: <img style="margin-right: 15px;margin-left: 15px;" src="{% static 'core/images/phone_icon.png' %}" alt="#"><a href="#">+56930729548</a></li>
                                 <li class="dinone"><img style="margin-right: 15px;" src="{% static 'core/images/mail_icon.png' %}" alt="#"><a href="#">santdelivery@gmail.com</a></li>
                                 <li class="dinone"><img style="margin-right: 15px;height: 21px;position: relative;top: -2px;" src="{% static 'core/images/location_icon.png' %}" alt="#"><a href="#">Av. Republica #104</a></li>
-                                <li class="button_user"><a class="button active" href="#">Login</a><a class="button" href="{% url 'Registro' %}">Registro</a></li>
+                                <li class="button_user"><a class="button active" href="#">Login</a><a class="button" href="{% url 'Registro' %}">Registraste !</a></li>
                                 <li><img style="margin-right: 15px;" src="{% static 'core/images/search_icon.png' %}" alt="#"></li>
                                 <li>
                                     <button type="button" id="sidebarCollapse">
@@ -109,9 +109,9 @@
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="slider_cont">
-                                                <h3>Descubre Los Restaurant <br>Cerca de ti ! </h3>
-                                                <p>Buenas opciones de comida cerca de ti, los mejores precios</p>
-                                                <a class="main_bt_border" href="#">Ordena Ya !</a>
+                                                <h3>Descubre Listado De Nuestros Socios <br>Cerca de ti ! </h3>
+                                                <p>Si no encuentras el producto que buscas, revisa el listado de nuestros Asociados!</p>
+                                                <a class="main_bt_border" href="{% url 'Listar_Socios' %}"> Ver !</a>
                                             </div>
                                         </div>
                                         <div class="col-md-7">
@@ -121,7 +121,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
+                                <!-- <div class="carousel-item">
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="slider_cont">
@@ -136,14 +136,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
-                            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+
+                            <!-- <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                                 <i class="fa fa-angle-up"></i>
                             </a>
                             <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
                                 <i class="fa fa-angle-down"></i>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
