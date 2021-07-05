@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-from core.forms import ClientesForm
-from .models import Socios
+from core.forms import ClientesForm, SociosForm, RepartidorForm
+from .models import Socios, Repartidor
 
 
 # Create your views here.
@@ -10,10 +10,6 @@ def index(request):
 
 def Contacto(request):
     return render(request, 'core/Contacto.html')
-
-
-def Despacho(request):
-    return render(request, 'core/Despacho.html')
 
 
 def Sobre_nosotros(request):
@@ -40,3 +36,37 @@ def Listar_Socios(request):
         "Socios" : Ls
     }
     return render(request, 'core/Listar_Socios.html',datos)
+
+
+def Registro_Socio(request):
+    datos = {
+        'form' : SociosForm()
+    }
+
+    if request.method == 'POST':
+        formulario = SociosForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = "Usuario Ingresado Correctamente"
+    return render(request, 'core/Registro_Socio.html',datos)
+
+
+def Repartidor_Registro(request):
+    datos = {
+        'form' : RepartidorForm()
+    }
+
+    if request.method == 'POST':
+        formulario = RepartidorForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje'] = "Usuario Ingresado Correctamente"
+    return render(request, 'core/Repartidor_Registro.html',datos)
+
+
+def Estado_Despacho(request):
+    Rp = Repartidor.objects.all()
+    datos = {
+        "Repartidor" : Rp
+    }
+    return render(request, 'core/Estado_Despacho.html',datos)

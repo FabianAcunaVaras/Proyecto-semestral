@@ -53,7 +53,7 @@
                         <a href="{% url 'Comida' %}">Comida</a>
                     </li>
                     <li class="active">
-                        <a href="{% url 'Despacho' %}">Despacho</a>
+                        <a href="{% url 'Estado_Despacho' %}">Despacho</a>
                     </li>
                     <li>
                         <a href="{% url 'Contacto' %}">Contacto</a>
@@ -84,7 +84,7 @@
                                 <li class="dinone"><img style="margin-right: 15px;" src="{% static 'core/images/mail_icon.png' %}" alt="#"><a href="#">santdelivery@gmail.com</a></li>
                                 <li class="dinone"><img style="margin-right: 15px;height: 21px;position: relative;top: -2px;" src="{% static 'core/images/location_icon.png' %}" alt="#"><a href="#">Av. Republica #104</a></li>
                                 
-                                <li><img style="margin-right: 15px;" src="{% static 'core/images/search_icon.png' %}" alt="#"></li>
+                                
                                 <li>
                                     <button type="button" id="sidebarCollapse">
                                         <img src="{% static 'core/images/menu_icon.png' %}" alt="#">
@@ -112,16 +112,30 @@
 </div>
 
 <table class="table table-hover table-yellow">
-    <thead>
-        <tr>
-            
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Telefono</th>
-            <th scope="col">Direccion</th>
-            
-        </tr>
-    </thead>
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                
+                <th scope="col">Nombre</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Direccion</th>
+                <th scope ="col">Estado</th>
+           
+                       
+            </tr>
+        </thead>
+        <tbody>
+            {% for ve in Repartidor %}
+            <tr>
+                <td>{{ve.NombreCompleto}}</td>
+                <td>{{ve.Telefono}}</td>
+                <td>{{ve.Direccion}}</td>
+                <td>{{ve.idEstadoRepartidor}}</td>
+                       
+            </tr>
+            {% endfor %}
+        </tbody>
+    
 </table>
 
 
@@ -171,7 +185,7 @@
                         <ul class="lik">
                             <li > <a href="{% url 'index' %}">Inicio</a></li>
                             <li> <a href="{% url 'Comida' %}">Comida</a></li>
-                            <li class="active"> <a href="{% url 'Despacho' %}">Despacho</a></li>
+                            <li class="active"> <a href="{% url 'Estado_Despacho' %}">Despacho</a></li>
                             <li> <a href="{% url 'Contacto' %}">Contacto</a></li>
                             <li> <a href="{% url 'Sobre_nosotros' %}">Sobre Nosotros</a></li>
                         </ul>
