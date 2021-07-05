@@ -24,12 +24,12 @@ class Estado_ProductoForm(ModelForm):
 class ClientesForm(ModelForm):
     class Meta:
         model = Clientes
-        fields = ['idClientes', 'Rut', 'DvRut', 'NombreCompleto', 'Telefono', 'Direccion', 'Mail', 'Password', 'EstadoCliente']
+        fields = ['idClientes', 'Rut', 'DvRut', 'NombreCompleto', 'Telefono', 'Direccion', 'Mail', 'Password', 'idEstadoCliente']
 
 class RepartidorForm(ModelForm):
     class Meta:
         model = Repartidor
-        fields = ['idRepartidor', 'Rut', 'DvRut', 'NombreCompleto', 'Telefono', 'Direccion', 'Mail', 'EstadoCliente']
+        fields = ['idRepartidor', 'Rut', 'DvRut', 'NombreCompleto', 'Telefono', 'Direccion', 'Mail', 'idEstadoRepartidor']
 
 class ProductosForm(ModelForm):
     class Meta:
