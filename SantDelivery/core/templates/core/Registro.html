@@ -27,11 +27,9 @@
                     <form method="post" action="" id="formulario" >
                         {% csrf_token %}
                         <br> 
-                        <center><table>
+                        <div class="form-group">
                             {{ form.as_p }}
-                        </table></center>
-                        
-       
+                        </div>
                         <br>
                         <hr>
                         <div class="d-flex justify-content-end">
