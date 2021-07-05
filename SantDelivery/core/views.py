@@ -24,9 +24,6 @@ def Comida(request):
 
 
 def Registro(request):
-    return render(request, 'core/Registro.html')
-
-def Nuevo_Proveedor(request):
     datos = {
         'form' : ClientesForm()
     }

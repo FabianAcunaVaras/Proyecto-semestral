@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
     
 
-    <title>Crear Proveedor</title>
+    <title>Creacion Cliente</title>
 </head>
 
 <body>
- 
-    <center><h2>Nuevo Proveedor</h2></center>
+    <hr>
+    <hr>
+    <center><h2>Nuevo Cliente</h2></center>
     <hr>
     <br>
     <div class="row">
@@ -28,7 +29,9 @@
                         {% csrf_token %}
                         <br> 
                         <div class="form-group">
-                            {{ form.as_p }}
+                            <table>
+                            {{ form}}
+                            </table>
                         </div>
                         <br>
                         <hr>
@@ -36,7 +39,12 @@
                             <input type="submit" class="btn btn-primary" id="enviar" value="Enviar">
                             &nbsp;
                             <input type="reset" class="btn btn-secondary" id="limpiar" value="Limpiar">
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            <a class="btn btn-success" href="{% url 'index' %}"> Inicio</a>
                         </div>
+                        
                         
                     </form>
                     <div class="row">
