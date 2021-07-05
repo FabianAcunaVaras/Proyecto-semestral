@@ -40,7 +40,7 @@ class Clientes(models.Model):
     Direccion = models.CharField(max_length=100, verbose_name="Dirección Cliente")
     Mail = models.CharField(max_length=50, verbose_name="E-mail Cliente")
     Password = models.CharField(max_length=10, verbose_name="Password Cliente")
-    EstadoCliente = models.ForeignKey(Estado_Clientes, on_delete=models.CASCADE)
+    idEstadoCliente = models.ForeignKey(Estado_Clientes, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.DvRut
