@@ -28,7 +28,9 @@
                         {% csrf_token %}
                         <br> 
                         <div class="form-group">
-                            {{ form.as_p }}
+                            <table>
+                                {{ form}}                                
+                            </table>
                         </div>
                         <br>
                         <hr>

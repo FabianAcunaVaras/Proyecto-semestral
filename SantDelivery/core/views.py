@@ -1,7 +1,6 @@
-
-from django.core.exceptions import ValidationError
 from django.shortcuts import render,redirect
-from core.forms import ClientesForm 
+from core.forms import ClientesForm
+from .models import Socios
 
 
 # Create your views here.
@@ -23,11 +22,7 @@ def Sobre_nosotros(request):
 def Comida(request):
     return render(request, 'core/Comida.html')
 
-
 def Registro(request):
-    return render(request, 'core/Registro.html')
-
-def Nuevo_Proveedor(request):
     datos = {
         'form' : ClientesForm()
     }
@@ -38,3 +33,10 @@ def Nuevo_Proveedor(request):
             formulario.save()
             datos['mensaje'] = "Usuario Ingresado Correctamente"
     return render(request, 'core/Registro.html',datos)
+
+def Listar_Socios(request):
+    Ls = Socios.objects.all()
+    datos = {
+        "Socios" : Ls
+    }
+    return render(request, 'core/Listar_Socios.html',datos)
