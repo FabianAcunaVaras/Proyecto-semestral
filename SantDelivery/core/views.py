@@ -1,8 +1,7 @@
 
 from django.core.exceptions import ValidationError
 from django.shortcuts import render,redirect
-from core.forms import ClientesForm 
-
+from core.forms import ClientesForm
 
 # Create your views here.
 def index(request):
