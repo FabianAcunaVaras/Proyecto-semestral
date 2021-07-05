@@ -53,7 +53,7 @@ class Repartidor(models.Model):
     Telefono = models.CharField(max_length=12, verbose_name="Telefóno Cliente")
     Direccion = models.CharField(max_length=100, verbose_name="Dirección Cliente")
     Mail = models.CharField(max_length=50, verbose_name="E-mail Cliente")
-    EstadoReparidor = models.ForeignKey(Estado_Repartidor, on_delete=models.CASCADE)
+    idEstadoRepartidor = models.ForeignKey(Estado_Repartidor, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.DvRut
