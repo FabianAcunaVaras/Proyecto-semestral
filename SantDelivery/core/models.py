@@ -3,6 +3,13 @@ from django.db import models
 
 
 # Create your models here.
+class Estado_Socios(models.Model):
+    idEstadoSocio = models.AutoField(primary_key=True, verbose_name="Id Estado Socio")
+    GlosaEstadoSocio = models.CharField(max_length=50, verbose_name="Glosa Estado Socio")
+
+    def __str__(self):
+        return self.GlosaEstadoSocio
+
 class Estado_Clientes(models.Model):
     idEstadoCliente = models.AutoField(primary_key=True, verbose_name="Id Estado Clientes")
     GlosaEstado = models.CharField(max_length=50, verbose_name="Glosa Estado Cliente")
@@ -88,3 +95,15 @@ class Detalle_Pedidos(models.Model):
     
     def __str__(self):
         return self.ObsProducto
+
+class Socios(models.Model):
+    idSocio = models.AutoField(primary_key=True, verbose_name="Id Socio")
+    NombreSocio = models.CharField(max_length=200, verbose_name="Nombre Socio")
+    Telefono = models.CharField(max_length=12, verbose_name="Telefóno Socio")
+    Direccion = models.CharField(max_length=100, verbose_name="Dirección Socio")
+    Mail = models.CharField(max_length=50, verbose_name="E-mail Socio")
+    Web = models.CharField(max_length=100, verbose_name="Web Socio")
+    idEstadoSocio = models.ForeignKey(Estado_Socios, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.NombreSocio
